@@ -1,0 +1,170 @@
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: fit-content;
+}
+
+/* header */
+.header {
+    position: fixed;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    border-bottom: 1px solid darkgray;
+    z-index: 99;
+}
+.header .fade-screen {
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+}
+.header .alt-nav {
+    position: absolute;
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin: 5px 0px;
+    z-index: 100;
+}
+.alt-nav > button{
+    width: 30px;
+    height: 60px;
+    z-index: 101;
+}
+.alt-nav button {
+    position: absolute;
+    border: none;
+    background: transparent;
+}
+.alt-nav .alt-nav-bar {
+    position: fixed;
+    top: 0px;
+    padding-top: 70px;
+    left: 0px;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    padding-left: 40px;
+    border-right: 1px solid darkgray;
+    transform: translateX(-250px);
+    animation-duration: 0.6s;
+}
+.alt-nav-bar a {
+    position: relative;
+    height: 20px;
+    margin: 10px 0px;
+}
+
+.header .logo {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.logo a {
+    height: 100%;
+    padding-left: 25px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.logo img {
+    height: 40px;
+}
+.logo .logo-name {
+    padding-left: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16pt;
+    font-weight: 400;
+    font-stretch: ultra-condensed;
+}
+.logo a:hover{
+    color: gray;
+}
+.header .navigation {
+    margin: 0px;
+    padding: 0px;
+    padding-right: 20px;
+}
+.navigation a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+.navigation a button {
+    width: 100%;
+    height: 100%;
+    padding: 0px 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: 500;
+    border: none;
+    background-color: white;
+}
+.navigation a button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    background-color: rgba(244,244,244,1);
+    padding: 20px 0px;
+    font-size: 10pt;
+}
+.footer span {
+    font-weight: bold;
+}
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+.footer a:hover {
+    color: gray;
+}
+
+/* REPONSIVE */
+@media only screen and (max-width: 992px) {
+    .header {
+        border: none;
+    }
+    .header .logo-name, .header .navigation {
+        display: none !important;
+    }
+    .header > button:first-child {
+        display: block;
+    }
+    .header .logo {
+        transform: translateX(30px);
+    }
+    .header .alt-nav {
+        display: flex;
+    }
+}
+@keyframes slideIn {
+    from {
+        visibility: hidden;
+        transform: translateX(-250px);
+    }
+    to {
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+@keyframes slideOut {
+    from {
+        visibility: visible;
+        transform: translateX(0px);
+    }
+    to {
+        visibility: hidden;
+        transform: translateX(-250px);
+    }
+}
