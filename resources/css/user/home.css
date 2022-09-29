@@ -35,6 +35,11 @@
 }
 
 /* .body .content */
+.body .body-content {
+    position: relative;
+    height: fit-content;
+    background-color: white;
+}
 .body .content {
     position: relative;
     width: 100%;
